@@ -15,7 +15,8 @@ let urlDB;
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/cafe';
 } else {
-    urlDB = 'mongodb+srv://strider:BtFLYjCidkTqIwRt@cluster0.rxn5h.mongodb.net/cafe';
+    //urlDB = 'mongodb+srv://strider:BtFLYjCidkTqIwRt@cluster0.rxn5h.mongodb.net/cafe';
+    urlDB = process.env.MONGO_URI; //Esta variable es la que seete en heroku, para que en github no se viera mi conexion
 }
 
 
